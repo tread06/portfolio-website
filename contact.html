@@ -33,28 +33,35 @@
                 </ul>
             </nav>
         </header>    
-        <section>
-            <h1>Contact</h1>
-            <a href="mailto:tread06@gmail.com?subject=I%20saw%20your%20portfolio%20on%20the%20web.%20Let's%20chat!">Contact me</a>
-            <form action="" method="post" id="contact-form">
-                <label class="standard-label" for="contact-email">E-mail: </label>
-                <input type="email" required id="contact-email">              
-                <label class="standard-label" for="contact-tel">Telephone: </label>
-                <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel">              
-                <label class="standard-label" for="contact-message">Message: </label>
-                <textarea required maxlength="240" id="contact-message"></textarea>              
-                <input type="submit" value="Send message">
-            </form>
-            <div class="contact-info">
-                Tanner Read<br>
-                2204 Old 220 Rd<br>
-                Howard, PA<br>
-                United States<br>
-                <br>
-                Tel <a href="tel:+18144414120">Tel: +1 814-441-4120</a><br>
-                Skype <a href="skype:live:tread06_1">tread06_1</a><br>
-                <a href="mailto:tread06@gmail.com?subject=I%20saw%20your%20portfolio%20on%20the%20web.%20Let's%20chat!">tread06@gmail.com</a>
+        <section class="contact">
+            <div class="contact__title">
+                <h1 >Contact</h1>               
             </div>
+            <div class="contact__info">
+                <p>Tanner Read</p>
+                <p>2204 Old 220 Rd</p>
+                <p>Howard, PA</p>
+                <p>United States</p><br>
+                <a href="tel:+18144414120" class="link">Phone: +1 814-441-4120</a><br>
+                <a href="skype:live:tread06_1" class="link">Skype: tread06_1</a><br>
+                <a href="mailto:tread06@gmail.com?subject=I%20saw%20your%20portfolio%20on%20the%20web.%20Let's%20chat!" class="link">tread06@gmail.com</a><br>
+                <a href="mailto:tread06@gmail.com?subject=I%20saw%20your%20portfolio%20on%20the%20web.%20Let's%20chat!" class="button contact__button">Contact me</a>
+            </div>
+            <div class="contact__form">
+                <form action="" method="post" id="contact-form">
+                    <label class="standard-label" for="contact-email">E-mail: </label><br>
+                    <input type="email" required id="contact-email"><br>
+                    <label class="standard-label" for="contact-tel">Telephone: </label><br>
+                    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel"><br>              
+                    <label class="standard-label" for="contact-message">Message: </label><br>
+                    <textarea required maxlength="240" id="contact-message"></textarea><br>              
+                    <input type="submit" value="Send message"><br>
+                </form>
+            </div>
+
+            
+            
+            
         </section>
         <footer class="page-footer">
             <p>Find me on</p>    
