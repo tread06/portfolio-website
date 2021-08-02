@@ -142,12 +142,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 .project-list__title {
     text-align: center;
 }
-
 .about-me{
     margin: auto;
     max-width: 60%;
     text-align: center;
 }
+
+
+
+
+
 
 /* animations */
 .link::after
@@ -256,7 +260,7 @@ a.link:hover{
 }
 
 /* start grid fallback */
-.project-list__item {
+.project-list__item{
     display: inline-block;
     width: 33%;
 }
@@ -281,6 +285,31 @@ a.link:hover{
         text-align: center;
         padding: 20px;        
     }
+    .contact{  
+        display: -ms-grid;  
+        display: grid; 
+        margin: 0 auto; 
+        width: 80%;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .contact__title{  
+        -ms-grid-column: 1;  
+            grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+    }
+    .contact__info{        
+        padding: 20px;  
+    }
+    .contact__info p{        
+        padding: 0;
+        margin: 0;
+    }
+    .contact__form{
+        padding: 20px;        
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -288,12 +317,14 @@ a.link:hover{
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;    
     }
+    
 }
 @media all and (min-width: 500px) and (max-width: 750px){
     .project-list {
         -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
     }
+    
 }
 @media all and (max-width: 750px){
 
@@ -314,4 +345,12 @@ a.link:hover{
         font-size: 16px;
         font-weight: 700;
     }
+    .contact{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .contact__title{
+        -ms-grid-column-span: 2;
+        grid-column-end: 2;
+    }    
 }
