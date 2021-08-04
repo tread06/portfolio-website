@@ -11,7 +11,7 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
     --primary-color: #357b70;
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
-    --primary-box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    --primary-box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.267);
 }
 * {
     box-sizing: border-box;
@@ -147,10 +147,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 
-
-
-
-
 /* animations */
 .link::after
 {
@@ -227,6 +223,8 @@ a.link:hover{
 .project-list__item{
     display: inline-block;
     width: 33%;
+    border-radius: 10px;
+    box-shadow: var(--primary-box-shadow);
 }
 /* end grid fallback */
 
