@@ -5,31 +5,43 @@
 * Browsers: last 4 version
 */
 
+/* to do for final version >> from career foundry Intro to frontend development 1.8
+
+Run your transpiled CSS through the autoprefixer (or any other postprocessor you decide to use).
+Create a new CSS file called “style.production.css” and paste the output from the autoprefixer into this file.
+Update your links in the header of the CSS file to the new “style.production.css” file.
+Make sure you keep a copy of your original “styles.css” file. If you want to make any changes later, it’s best to make it in this file and repeat the process again.
+*/
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
-body {
-    font-family: 'Lato', sans-serif;
+body {    
+    font-family: 'lato', sans-serif;
     font-weight: 400;
     font-size: 16px;    
-    line-height: 1.6;
+    line-height: 1.8;    
 }
 h1 {
-    font-size: 30px;
+    font-family: 'Archivo Black', sans-serif;
+    line-height: 1.2;
+    font-size: 50px;
     font-weight: 700;
 }
 h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 1.2;
 }
 h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 a {   
-    color: #357b70;   
+    text-decoration: none;  
+    color: #0a9287;   
     position: relative; 
     -webkit-transition: 0.4s color; 
     -o-transition: 0.4s color; 
@@ -37,10 +49,10 @@ a {
     z-index: 10; 
 }
 a:visited {   
-    color: #357b70;   
+    color: #0a9287;   
 }
 a.active {   
-    color: #357b70;   
+    color: #0a9287;   
 }
 a.button:visited{
     color: white;   
@@ -48,17 +60,15 @@ a.button:visited{
 a:hover, a:focus {    
     text-decoration: none;    
 }
-.header__logo{       
-    margin-left: 10px;      
-}
+
 button {  
     display: inline-block; 
     border: none;    
     font-family: inherit;    
-    background-color: #357b70;   
+    background-color: #0a9287;   
     color: white;
     text-decoration: none;    
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 3px;    
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     margin: 20px;
@@ -66,14 +76,15 @@ button {
     -o-transition: 0.2s opacity;
     transition: 0.2s opacity;
 }
+
 .button {  
     display: inline-block; 
     border: none;    
     font-family: inherit;    
-    background-color: #357b70;   
+    background-color: #0a9287;   
     color: white;
     text-decoration: none;    
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 3px;    
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     margin: 20px;
@@ -96,16 +107,22 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 .navigation-list li {
     display: inline-block;
-    margin-left: 15px;
+    margin-right: 15px;
 }
-.profile__portrait{
-    float: left;
+.profile__portrait{    
     width: 250px;
     margin-right: 40px;
     border-radius: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 .page-footer {
     clear: both;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -116,27 +133,73 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-align: center; 
 }
 .profile {
-    max-width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 800px;
+    width: 80%;
     margin: 0 auto;
+    margin-top: 10vh;
 }
+.profile__intro{
+    -webkit-animation: 1s text-fade-in linear;
+            animation: 1s text-fade-in linear;
+}
+.profile__text_1{
+    color: transparent;
+    -webkit-animation: 1s text-fade-in linear;
+            animation: 1s text-fade-in linear;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.profile__text_2{
+    color: transparent;
+    -webkit-animation: 1s text-fade-in linear;
+            animation: 1s text-fade-in linear;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.profile__text-highlight{
+    font-family: 'Archivo Black', sans-serif;
+    
+}
+.profile__work-link{    
+    color: #0a9287;
+    animation: 4s link-fade-in  reverse linear;       
+}
+
 .page-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    padding: 20px;        
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    width: 100%;   
+    -webkit-box-align: center;   
+        -ms-flex-align: center;   
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;        
 }
-.page-header__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
+/* .page-header__item {
+    flex: 0 1 200px;
+    background-color: aqua;     
 }
 .page-header__item:last-child {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     text-align: right;
+} */
+.header__logo{          
+    margin: 0;
+    padding: 0;     
 }
 
 .project-list__title {
@@ -147,10 +210,24 @@ button:hover, button:focus, .button:hover, .button:focus {
     max-width: 60%;
     text-align: center;
 }
-
-
-
-
+.social-media{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+}
+.social-media__link{
+    display: block;
+    margin: 10px 5px;
+}
+.berlin-illustration{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
 
 
 /* animations */
@@ -160,7 +237,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     left: 50%;    
     width: 0%;
     height: 100%;
-    background: #357b70;   
+    background: #0a9287;   
     content: "";
     opacity: 0;
     -webkit-transition: all 0.3s;
@@ -193,6 +270,10 @@ a.link:hover{
             animation: 60s cloud-move-reverse infinite alternate linear;
 }
 
+
+
+
+
 @-webkit-keyframes color-change {
     0% {
         fill: #edc655;
@@ -204,6 +285,10 @@ a.link:hover{
         fill: #f76414;
     }
 }
+
+
+
+
 
 @keyframes color-change {
     0% {
@@ -258,11 +343,52 @@ a.link:hover{
                 transform: translate(100px, 48px);
     }
 }
+@-webkit-keyframes text-fade-in {
+    from {
+        color: rgba(0, 0, 0, 0)
+    }
+    to {
+        color: black;
+    }
+}
+@keyframes text-fade-in {
+    from {
+        color: rgba(0, 0, 0, 0)
+    }
+    to {
+        color: black;
+    }
+}
+@-webkit-keyframes link-fade-in {
+    0% {
+        color: #0a9287;
+    }
+    25% {
+        color: transparent
+    }
+    100% {
+        color: transparent
+    }
+}
+@keyframes link-fade-in {
+    0% {
+        color: #0a9287;
+    }
+    25% {
+        color: transparent
+    }
+    100% {
+        color: transparent
+    }
+}
 
 /* start grid fallback */
 .project-list__item{
     display: inline-block;
     width: 33%;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.267);
+            box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.267);
 }
 /* end grid fallback */
 
@@ -289,14 +415,14 @@ a.link:hover{
         display: -ms-grid;  
         display: grid; 
         margin: 0 auto; 
-        width: 80%;
+        width: 60%;
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         text-align: center;
     }
     .contact__title{  
         -ms-grid-column: 1;  
-        grid-column-start: 1;
+            grid-column-start: 1;
         -ms-grid-column-span: 2;
         grid-column-end: 3;
     }
@@ -316,7 +442,7 @@ a.link:hover{
     .project-list {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;    
-    }
+    }    
     
 }
 @media all and (min-width: 500px) and (max-width: 750px){
@@ -331,7 +457,7 @@ a.link:hover{
     .project-list {
             grid-gap: 10px;
     }
-    h1 {
+    /* h1 {
         font-size: 22px;
         font-weight: 700;
     }
@@ -344,7 +470,7 @@ a.link:hover{
     h3 {
         font-size: 16px;
         font-weight: 700;
-    }
+    } */
     .contact{
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -353,4 +479,10 @@ a.link:hover{
         -ms-grid-column-span: 2;
         grid-column-end: 2;
     }    
+    .profile {        
+        -webkit-box-orient: vertical;        
+        -webkit-box-direction: normal;        
+            -ms-flex-direction: column;        
+                flex-direction: column;
+    }
 }
