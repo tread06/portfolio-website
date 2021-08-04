@@ -422,7 +422,8 @@ a.link:hover{
     }
     .contact__title{  
         -ms-grid-column: 1;  
-            grid-column-start: 1;
+        grid-column: 1;
+        grid-column-start: 1;
         -ms-grid-column-span: 2;
         grid-column-end: 3;
     }
