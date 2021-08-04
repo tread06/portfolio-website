@@ -16,26 +16,31 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 * {
     box-sizing: border-box;
 }
-body {
-    font-family: 'Lato', sans-serif;
+body {    
+    font-family: 'lato', sans-serif;
     font-weight: 400;
     font-size: 16px;    
-    line-height: 1.6;
+    line-height: 1.8;
 }
 h1 {
-    font-size: 30px;
+    font-family: 'Archivo Black', sans-serif;
+    line-height: 1.2;
+    font-size: 50px;
     font-weight: 700;
 }
 h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 1.2;
 }
 h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 a {   
+    text-decoration: none;  
     color: var(--primary-color);   
     position: relative; 
     transition: 0.4s color;
@@ -50,9 +55,7 @@ a.button:visited{
 a:hover, a:focus {    
     text-decoration: none;    
 }
-.header__logo{       
-    margin-left: 10px;      
-}
+
 button, .button {  
     display: inline-block; 
     border: none;    
@@ -60,7 +63,7 @@ button, .button {
     background-color: var(--primary-color);   
     color: white;
     text-decoration: none;    
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 3px;    
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     margin: 20px;
@@ -81,7 +84,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 .navigation-list li {
     display: inline-block;
-    margin-left: 15px;
+    margin-right: 15px;
 }
 .profile__portrait{
     float: left;
@@ -97,20 +100,41 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 .profile {
     max-width: 700px;
+    width: 80%;
     margin: 0 auto;
+    margin-top: 20vh;
+}
+.profile__intro{
+    animation: 1s text-fade-in linear;
+}
+.profile__text{
+    color: transparent;
+    animation: 1s text-fade-in linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.profile__text-highlight{
+    font-family: 'Archivo Black', sans-serif;
+    
 }
 .page-header {
     display: flex;
-    width: 100%;
-    padding: 20px;        
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    width: 100%;   
+    align-items: center;
+    justify-content: center;        
 }
-.page-header__item {
+/* .page-header__item {
     flex: 0 1 200px;
+    background-color: aqua;     
 }
 .page-header__item:last-child {
     flex-grow: 1;
     text-align: right;
+} */
+.header__logo{          
+    margin: 0;
+    padding: 0;     
 }
 
 .project-list__title {
@@ -190,6 +214,14 @@ a.link:hover{
         transform: translate(100px, 48px);
     }
 }
+@keyframes text-fade-in {
+    from {
+        color: rgba(0, 0, 0, 0)
+    }
+    to {
+        color: black;
+    }
+}
 
 /* start grid fallback */
 .project-list__item{
@@ -218,7 +250,7 @@ a.link:hover{
     .contact{  
         display: grid; 
         margin: 0 auto; 
-        width: 80%;
+        width: 60%;
         grid-template-columns: 1fr 1fr;
         text-align: center;
     }

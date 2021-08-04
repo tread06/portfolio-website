@@ -8,31 +8,33 @@
         <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
 
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="./css/style.production.css">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
     </head>
     <body>
         <!--nav bar-->
         <header class="page-header">
-            <img src="img/tanner-Read-logo.png" alt="Tanner Read logo image" class="header__logo page-header__item" >
             <nav class="main-navigation page-header__item">                
                 <ul role="menubar" class="navigation-list">
                     <li role="presentation">
-                        <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active  link">Home</a>
+                        <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active link">Home</a>
                     </li>
                     <li role="presentation">
-                        <a href="about.html" role="menuitem" class="navigation-list__item  link">About me</a>
+                        <a href="about.html" role="menuitem" class="navigation-list__item link">About me</a>
                     </li>
                     <li role="presentation">
-                        <a href="work.html" role="menuitem" class="navigation-list__item  link">Work</a>
+                        <a href="work.html" role="menuitem" class="navigation-list__item link">Work</a>
                     </li>
                     <li role="presentation">
-                        <a href="contact.html" role="menuitem" class="navigation-list__item  link">Contact</a>
+                        <a href="contact.html" role="menuitem" class="navigation-list__item link">Contact</a>
                     </li>
                 </ul>
             </nav>
-        </header>    
+        </header>   
         <section class="contact">
             <div class="contact__title">
                 <h1 >Contact</h1>               
@@ -42,12 +44,18 @@
                 <p>2204 Old 220 Rd</p>
                 <p>Howard, PA</p>
                 <p>United States</p><br>
+                <div class="social-media">
+                    <a href="https://github.com/tread06" role="menuitem" target="_blank"><img src="img/github_icon.svg" alt="github icon"> </a>                    
+                    <a href="http://www.linkedin.com/in/tanner-read" role="menuitem" target="_blank"><img src="img/linkedin_icon.svg" alt="linkedin icon"> </a>
+                </div><br>                
+            </div>
+            <div class="contact__info">
                 <a href="tel:+18144414120" class="link">Phone: +1 814-441-4120</a><br>
                 <a href="skype:live:tread06_1" class="link">Skype: tread06_1</a><br>
                 <a href="mailto:tread06@gmail.com?subject=I%20saw%20your%20portfolio%20on%20the%20web.%20Let's%20chat!" class="link">tread06@gmail.com</a><br>
                 <a href="mailto:tread06@gmail.com?subject=I%20saw%20your%20portfolio%20on%20the%20web.%20Let's%20chat!" class="button contact__button">Contact me</a>
             </div>
-            <div class="contact__form">
+            <!-- <div class="contact__form">
                 <form action="" method="post" id="contact-form">
                     <label class="standard-label" for="contact-email">E-mail: </label><br>
                     <input type="email" required id="contact-email"><br>
@@ -57,16 +65,16 @@
                     <textarea required maxlength="240" id="contact-message"></textarea><br>              
                     <input type="submit" value="Send message"><br>
                 </form>
-            </div>
+            </div> -->
         </section>
-        <footer class="page-footer">
+        <!-- <footer class="page-footer">
             <p>Find me on</p>    
             <div class="social-media">
                 <img src="img/github_icon.svg" alt="github icon">           
                 <img src="img/twitter_icon.svg" alt="twitter icon">           
                 <img src="img/linkedin_icon.svg" alt="linkedin icon">
             </div>    
-        </footer>
+        </footer> -->
 
         <script src="js/tota11y.min.js"></script>
     </body>
