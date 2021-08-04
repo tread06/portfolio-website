@@ -43,9 +43,6 @@ a {
     text-decoration: none;  
     color: #0a9287;   
     position: relative; 
-    -webkit-transition: 0.4s color; 
-    -o-transition: 0.4s color; 
-    transition: 0.4s color;
     z-index: 10; 
 }
 a:visited {   
