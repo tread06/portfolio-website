@@ -8,7 +8,7 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 */
 
 :root {
-    --primary-color: #357b70;
+    --primary-color: #0a9287;
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
     --primary-box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.267);
@@ -20,7 +20,7 @@ body {
     font-family: 'lato', sans-serif;
     font-weight: 400;
     font-size: 16px;    
-    line-height: 1.8;
+    line-height: 1.8;    
 }
 h1 {
     font-family: 'Archivo Black', sans-serif;
@@ -86,31 +86,43 @@ button:hover, button:focus, .button:hover, .button:focus {
     display: inline-block;
     margin-right: 15px;
 }
-.profile__portrait{
-    float: left;
+.profile__portrait{    
     width: 250px;
     margin-right: 40px;
     border-radius: 50%;
+    align-self: center;
 }
 .page-footer {
     clear: both;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center; 
 }
 .profile {
-    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
     width: 80%;
     margin: 0 auto;
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 .profile__intro{
     animation: 1s text-fade-in linear;
 }
-.profile__text{
+.profile__text_1{
     color: transparent;
     animation: 1s text-fade-in linear;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.profile__text_2{
+    color: transparent;
+    animation: 1s text-fade-in linear;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
@@ -144,6 +156,20 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin: auto;
     max-width: 60%;
     text-align: center;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.social-media__link{
+    display: block;
+    margin: 10px 5px;
+}
+.berlin-illustration{
+    margin: auto;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -271,7 +297,7 @@ a.link:hover{
 @media all and (max-width: 500px) {
     .project-list {
         grid-template-columns: 1fr;    
-    }
+    }    
     
 }
 @media all and (min-width: 500px) and (max-width: 750px){
@@ -285,7 +311,7 @@ a.link:hover{
     .project-list {
             grid-gap: 10px;
     }
-    h1 {
+    /* h1 {
         font-size: 22px;
         font-weight: 700;
     }
@@ -298,11 +324,14 @@ a.link:hover{
     h3 {
         font-size: 16px;
         font-weight: 700;
-    }
+    } */
     .contact{
         grid-template-columns: 1fr;
     }
     .contact__title{
         grid-column-end: 2;
     }    
+    .profile {        
+        flex-direction: column;
+    }
 }
