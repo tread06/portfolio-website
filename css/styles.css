@@ -130,6 +130,11 @@ button:hover, button:focus, .button:hover, .button:focus {
     font-family: 'Archivo Black', sans-serif;
     
 }
+.profile__work-link{    
+    color: var(--primary-color);
+    animation: 4s link-fade-in  reverse linear;       
+}
+
 .page-header {
     display: flex;
     width: 100%;   
@@ -208,6 +213,10 @@ a.link:hover{
     animation: 60s cloud-move-reverse infinite alternate linear;
 }
 
+
+
+
+
 @keyframes color-change {
     0% {
         fill: #edc655;
@@ -242,6 +251,17 @@ a.link:hover{
     }
     to {
         color: black;
+    }
+}
+@keyframes link-fade-in {
+    0% {
+        color: var(--primary-color);
+    }
+    25% {
+        color: transparent
+    }
+    100% {
+        color: transparent
     }
 }
 
